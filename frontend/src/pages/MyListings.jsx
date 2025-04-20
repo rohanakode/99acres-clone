@@ -17,7 +17,7 @@ const MyListings = () => {
 
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/properties/mine",
+          `${import.meta.env.VITE_API_BASE}/api/properties/mine`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -42,11 +42,14 @@ const MyListings = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/properties/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `${import.meta.env.VITE_API_BASE}/api/properties/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       setMyProperties((prev) => prev.filter((prop) => prop._id !== id));
       alert("Property deleted successfully!");
