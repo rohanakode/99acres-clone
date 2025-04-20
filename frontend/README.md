@@ -48,7 +48,7 @@ cd ../client
 npm install
 
 # Create .env file in /client with the following:
-REACT_APP_API_BASE=http://localhost:5000
+REACT_APP_API_BASE=https://nine9acres-clone.onrender.com
 
 # Start frontend server
 npm start

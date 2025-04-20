@@ -15,7 +15,9 @@ const Home = () => {
 
   const fetchProperties = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/properties");
+      const res = await axios.get(
+        `${import.meta.env.VITE_API_BASE}/api/properties`
+      );
       setProperties(res.data);
     } catch (err) {
       console.error("Error fetching properties:", err);
@@ -23,7 +25,7 @@ const Home = () => {
   };
 
   const handleSearch = async () => {
-    let url = "http://localhost:5000/api/properties?";
+    let url = `${import.meta.env.VITE_API_BASE}/api/properties?`;
     if (searchLocation) url += `location=${searchLocation}`;
 
     try {

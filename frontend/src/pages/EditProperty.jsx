@@ -18,7 +18,7 @@ const EditProperty = () => {
     const fetchProperty = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/properties/${id}`
+          `${import.meta.env.VITE_API_BASE}/api/properties/${id}`
         );
         setForm({
           title: res.data.title || "",
@@ -65,11 +65,15 @@ const EditProperty = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/properties/${id}`, form, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      await axios.put(
+        `${import.meta.env.VITE_API_BASE}/api/properties/${id}`,
+        form,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       alert("Property updated successfully!");
       navigate("/my-listings");
     } catch (err) {

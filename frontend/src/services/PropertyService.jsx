@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/properties";
+const BASE_URL = `${import.meta.env.VITE_API_BASE}/api/properties`;
 
 export const getAllProperties = () => {
   return axios.get(BASE_URL);

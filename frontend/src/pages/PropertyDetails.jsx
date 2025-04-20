@@ -13,7 +13,7 @@ const PropertyDetails = () => {
     const fetchProperty = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/properties/${id}`
+          `${import.meta.env.VITE_API_BASE}/api/properties/${id}`
         );
         setProperty(res.data);
       } catch (err) {
@@ -41,7 +41,7 @@ const PropertyDetails = () => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:5000/api/properties/${id}`,
+        `${import.meta.env.VITE_API_BASE}/api/properties/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
