@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import MyListings from "./pages/MyListings";
 import EditProperty from "./pages/EditProperty";
+import ChatWidget from "./components/ChatWidget";
 
 const App = () => {
   const navigate = useNavigate();
@@ -102,6 +103,8 @@ const App = () => {
           <Route path="/my-listings" element={<MyListings />} />
           <Route path="/edit/:id" element={<EditProperty />} />
         </Routes>
+
+        <ChatWidget />
       </div>
     </div>
   );

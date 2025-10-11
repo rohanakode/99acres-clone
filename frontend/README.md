@@ -1,6 +1,6 @@
 # 99acres Clone – Real Estate Web App
 
-A full-stack real estate listing platform inspired by 99acres, built using React, Node.js, Express, MongoDB, and Cloudinary. Users can register, log in, post properties, edit or delete their own listings, and view all listings on a responsive interface.
+A full-stack real estate listing platform inspired by 99acres, built using React, Node.js, Express, MongoDB, and Cloudinary. Users can register, log in, post properties, edit or delete their own listings,  view all listings on a responsive interface with AI chatbot support.
 
 ---
 
@@ -11,6 +11,7 @@ A full-stack real estate listing platform inspired by 99acres, built using React
 - MongoDB + Mongoose (Database)
 - Cloudinary (Image Hosting)
 - JWT (Authentication)
+- AI Integration (Google Gemini API)
 - Bootstrap (Styling)
 
 ---
@@ -18,11 +19,13 @@ A full-stack real estate listing platform inspired by 99acres, built using React
 ## Features
 
 - User Authentication (Register & Login)
+- AI chatbot for customer support
 - Property Listing with Cloudinary Image Upload
 - Edit and 🗑 Delete Own Properties
 - My Listings Page
 - Public Property Details View
 - Responsive Design with Bootstrap
+
 
 ---
 
@@ -30,7 +33,7 @@ A full-stack real estate listing platform inspired by 99acres, built using React
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/99acres-clone.git
+git clone https://github.com/rohanakode/99acres-clone.git
 
 # Install backend dependencies
 cd backend
@@ -48,7 +51,7 @@ cd ../client
 npm install
 
 # Create .env file in /client with the following:
-REACT_APP_API_BASE=https://nine9acres-clone.onrender.com
+REACT_APP_API_BASE=http://localhost:5000
 
 # Start frontend server
 npm start

@@ -10,12 +10,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/genai": "^1.23.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
-    "mongoose": "^8.13.2"
+    "mongoose": "^8.13.2",
+    "node-fetch": "^2.7.0",
+    "openai": "^6.2.0"
   }
 }
